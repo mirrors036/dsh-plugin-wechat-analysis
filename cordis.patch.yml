@@ -1,0 +1,6 @@
+# dsh-plugin-wechat-analysis bundle layer — applied when a profile lists this bundle.
+# name is resolved through the profile's node_modules; id is the short slug used by
+# the profile configuration.
+- insert:
+    - id: wechat-chat-analysis
+      name: dsh-plugin-wechat-analysis
