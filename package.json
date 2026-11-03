@@ -1,0 +1,59 @@
+{
+  "name": "dsh-plugin-wechat-analysis",
+  "version": "0.1.1",
+  "description": "DSH 插件：Windows 微信聊天记录端到端分析工具链（SQLCipher 解密导出 → 多分片合并 → 标准消息包转换 → 全量统计 → 分层采样 → AI 关系深度分析 → 交互式 HTML 报告）。内置经实战验证的导出脚本；分析框架与报告生成依赖本机已安装的 she-love-me 技能。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "wechat",
+    "chat-analysis",
+    "chat-export",
+    "sqlcipher",
+    "relationship"
+  ],
+  "license": "MIT",
+  "author": "wangj",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirrors036/dsh-plugin-wechat-analysis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mirrors036/dsh-plugin-wechat-analysis/issues"
+  },
+  "homepage": "https://github.com/mirrors036/dsh-plugin-wechat-analysis#readme",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": ">=0.2.0"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  }
+}
